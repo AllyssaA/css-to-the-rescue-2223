@@ -12,6 +12,8 @@ De opdracht had de volgende eisen:
 - Creëer een dynamische CSS-only vuurwerkshow.
 - De gebruiker kan de show beïnvloeden.
 - Je moet het vuurwerk zelf maken. 
+
+Schets
 ![Schets van mijn vuurwerkshow](https://github.com/AllyssaA/css-to-the-rescue-2223/blob/main/docs/img/schets1.png)
 
 In de eerste week ben ik begonnen aan het creëeren van de canvas van mijn vuurwerkshow. Hierbij heb ik een beetje rond gespeeld met linear-gradient, radial-gradient en conic-gradient.
