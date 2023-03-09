@@ -14,7 +14,7 @@ De opdracht had de volgende eisen:
 - Je moet het vuurwerk zelf maken. 
 [img schets]
 
-In de eerste week ben ik begonnen aan het creeëren van de canvas van mijn vuurwerkshow. Hierbij heb ik een beetje rond gespeeld met linear-gradient, radial-gradient en conic-gradient.
+In de eerste week ben ik begonnen aan het creëeren van de canvas van mijn vuurwerkshow. Hierbij heb ik een beetje rond gespeeld met linear-gradient, radial-gradient en conic-gradient.
 
 Linear-gradient creëert een beeld die bestaat uit een progressieve overgang tussen twee of meer kleuren langs een rechte lijn. Dit heb ik toegepast op de lucht in mijn project. 
 ```css
