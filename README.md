@@ -1,46 +1,105 @@
-# CSS to the Rescue @cmda-minor-web 2022 - 2023
+# Week 1
 
-Wij vinden het web fascinerend. De laatste jaren is CSS een volwassen en zeer krachtige taal geworden (niet langer een bottleneck - integendeel). Veel van de (nieuwe) **CSS-lekkernijen** worden echter nog niet ten volle benut. Sommige delen van de spec worden onterecht (nog) niet bemind, andere delen zijn zo groot en complex dat we mogelijkheden nog niet hebben doorgrond. Aan jou de mooie opdracht om de onontgonnen delen van de CSS-wereld in kaart te brengen.
+In de eerste week kon ik een keuze maken uit een van de volgende eindopdrachten.
+- Modulair bedieningspaneel
+- Interactieve vuurwerkshow
+- Maak een 3D Rubrik's kubus
+- Tailwind zonder Tailwind, met moderne CSS
 
-**In dit vierweekse vak ga je experimenteren met (voor jou) nieuwe CSS technieken - om daarna/mee een innovatieve, experimentele én aangename ervaring te creëren - met alleen vanilla HTML en vanilla CSS (frameworks, preprocessors, libraries en JavaScript zijn niet toegestaan).**
+Ik heb gekozen voor de opdracht Interactieve vuurwerkshow. het leek me leuk om meer te leren over animaties, transities.
 
-Goed om te weten: Het experiment wordt gewaardeerd - zelfs/zeker als het niet (helemaal) lukt. Voel je vrij om verder te gaan dan de CSS-technieken die je al beheerst.
+De opdracht had de volgende eisen:
+- Creëer een dynamische CSS-only vuurwerkshow.
+- De gebruiker kan de show beïnvloeden.
+- Je moet het vuurwerk zelf maken. 
+[img schets]
 
-## Dingen om vooraf te doen
-- 🔱 **Fork** deze repository.
-- ✅ [**Enroll** je voor de minor via de courselector](https://icthva.sharepoint.com/sites/courseselector#/CourseSelector/web-design-and-development/2022-2023) (dan kun je je werk straks ook op [DLO](https://dlo.mijnhva.nl/d2l/home/456154) opleveren).
-- 📒 **Bekijk** het [programma](https://cmda-minor-web.github.io/css-to-the-rescue-2223/files/CSSttR-2223-Kick-off.pdf) (pdf 51MB), **het quizje** (soon) en de [kennismakingsoefening](https://cmda-minor-web.github.io/css-to-the-rescue-2223/oefening.html) alvast even.
+In de eerste week ben ik begonnen aan het creeëren van de canvas van mijn vuurwerkshow. Hierbij heb ik een beetje rond gespeeld met linear-gradient, radial-gradient en conic-gradient.
 
-## Opdrachten
-Het vak bestaat uit:
-- [Een kennismakingsoefening](https://cmda-minor-web.github.io/css-to-the-rescue-2223/oefening.html)
-- [De eindopdracht](https://cmda-minor-web.github.io/css-to-the-rescue-2223/index.html)
+Linear-gradient creëert een beeld die bestaat uit een progressieve overgang tussen twee of meer kleuren langs een rechte lijn. Dit heb ik toegepast op de lucht in mijn project. 
+```css
+background-image: linear-gradient(
+    0deg,
+    hsl(207deg 58% 40%) 4%,
+    hsl(210deg 63% 37%) 9%,
+    hsl(213deg 69% 35%) 15%,
+    hsl(216deg 80% 32%) 21%,
+    hsl(215deg 98% 27%) 28%,
+    hsl(215deg 96% 25%) 35%,
+    hsl(214deg 94% 23%) 42%,
+    hsl(212deg 91% 20%) 49%,
+    hsl(208deg 88% 16%) 56%,
+    hsl(210deg 89% 16%) 63%,
+    hsl(213deg 91% 15%) 70%,
+    hsl(216deg 93% 15%) 76%,
+    hsl(220deg 96% 15%) 82%,
+    hsl(220deg 98% 14%) 87%,
+    hsl(218deg 97% 13%) 91%,
+    hsl(215deg 95% 13%) 95%,
+    hsl(211deg 94% 12%) 98%,
+    hsl(206deg 93% 11%) 100%
+  );
+  ```
 
-De [beoordelingscriteria voor de eindopdracht](https://cmda-minor-web.github.io/css-to-the-rescue-2223/beoordelingsformulier.html) op een rijte.
+Radial-gradient creëert een beeld dat bestaat uit een progressieve overgang tussen twee of meer kleuren die vanuit een oorsprong stralen. De vorm kan een circle of een ellipse zijn. Dit heb ik toegepast op de zon en de maan.
+```css
+/* zon */
+background: radial-gradient(
+    circle,
+    #fff2d6 20%,
+    #d89766 35%,
+    transparent 55%
+);
+/* maan */
+background: radial-gradient(
+    circle,
+    #c2bfba 20%,
+    #e1dbd6 35%,
+    transparent 55%
+);
+```
 
-## Themasessies
-Schrijf je in het [CSSttR channel](https://teams.microsoft.com/l/channel/19%3acb82166dd12f4702a8c3b130b60ee873%40thread.tacv2/04%2520CSS%2520to%2520the%2520Rescue?groupId=c8b97eb6-ad53-4531-ad66-5c3c6297951c&tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7) bij 'Files' in de 'Indeling en Planning' Excel in voor zowel woensdag als donderdag in voor een themasessie naar je keuze (1 per dag):
-- [Materiaal voor de themasessies](https://cmda-minor-web.github.io/css-to-the-rescue-2223/themas.html)
+Conic-gradient maakt een beeld die bestaat uit een verloop met kleurovergangen die rond een middelpunt zijn geroteerd (in plaats van uit te stralen vanuit het midden). Voorbeelden van conische verlopen zijn cirkeldiagrammen en kleurenwielen. Dit heb ik toegepast op de oceaan. Waardoor het lijkt alsof het licht van maan/zon op de oceaan weerkaatst.
+```css
+background: conic-gradient(
+    from 90deg at 50% 150%,
+    #589bce,
+    #055ca7,
+    #052b4c,
+    #003b90,
+    #00174a
+);
+```
 
-## Programma
-Het vak beslaat 4 weken. Bekijk de [kick-off presentatie](https://cmda-minor-web.github.io/css-to-the-rescue-2223/files/CSSttR-2223-Kick-off.pdf) (pdf 48MB). 
+# Week 2
+In week 2 heb ik voor de themasessie animaties gekozen omdat ik nog niet veel wist hierover en hoe ik dat kon toepassen op vuurwerk. Tijdens deze sessie hebben we het o.a. gehad over:
+- animation-name naam van @keyframes
+- animation-duration
+- animation-iteration-count
+- animation-direction
+- animation-play-state running paused
+- animation-timing-function om te chainen en overzicht te houden meerdere divs met keyframes gebruiken, buitenkant gaat omhoog en de binnenste gaat draaien.
 
-In Teams vind je het [CSSttR channel](https://teams.microsoft.com/l/channel/19%3acb82166dd12f4702a8c3b130b60ee873%40thread.tacv2/04%2520CSS%2520to%2520the%2520Rescue?groupId=c8b97eb6-ad53-4531-ad66-5c3c6297951c&tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7) bij 'Files' de Excel met de 'Indeling en Planning'. Daar schrijf je je ook in voor themasessies en het eindgesprek.
+https://codepen.io/AllyssaA/pen/bGxGXPe
 
-Colleges, lessen en gesprekken vinden plaats in het TTH (4e verdieping :-).
+In mijn code had ik een switch gemaakt waarbij ik gebruik maakte van een form, daarin had ik een input checkbox met label en een span. Deze switch zorgt ervoor dat ik van dag naar nacht kan switchen. Ik kreeg als opmerking dat ik de de switch ook zonder label en span kon maken door middel van gebruik van `:before` en `:after`. Hiermee ging ik de rest van de week mee aan de slag.  
 
-## Docenten
-- Vasilis van Gemert
-- Sanne 't Hooft
+# Week 3
+Tussen week 2 en 3 liep ik een beetje vast met het refactoren van mijn switch. Ik besloot dus om helemaal opnieuw te beginnen met mijn switch in een codepen en het duurde een tijdje maar uiteindelijk is het me toch gelukt om een switch te maken zonder label of een span.
 
-## Leerdoelen
-- Je kunt experimenteren met (voor jou) nieuwe css-technieken - om de mogelijkheden op waarde te schatten en te gebruiken waar gepast.
-- Je hebt begrip van de volle kracht en mogelijkheden van CSS. Je laat zien dat CSS meer kan dan allen web pages 'stylen'.
-- Je hebt begrip van de interactie-technieken van CSS (en HTML). De UX is aangenaam bruikbaar binnen de gekozen context(en).
-- Je hebt begrip hoe progressive enhancement elegant toe te passen. Je laat zien dat je cascade, inheritance en specificity kunt toepassen.
+https://codepen.io/AllyssaA/pen/KKxayZO?editors=1100
+
+Deze week heb ik bomen aan mijn opdracht toegevoegd. Dit heb ik gedaan door 3 bomen in Illustrator te tekenen en te exporteren als SVG. Vervolgens heb ik styling hieraan toegevoegd met CSS.
 
 
-## De Selector First CSS & No JS aanpak
-Het **eerste uitgangspunt** is dat je *geen* ID's en classes gebruikt. Niet omdat ze niet nuttig zijn, maar om te oefenen met de [vele CSS selectoren](https://css-tricks.com/almanac/) die je tot je beschikking hebt. ID's mag je alleen gebruiken om de :target selector te triggeren en uiteraard om labels te koppelen aan inputs. En als het echt echt echt niet anders kan, heb je permissie om een enkele class toe te voegen.
 
-Een **tweede uitgangspunt** is dat je *geen* JavaScript gebruikt. Als iets niet kan met CSS, dan zal je iets anders moeten verzinnen om te maken. We onderzoeken de mogelijkheden van CSS in dit vak, en niet die van JS.
+# Bronnen
+https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/conic-gradient
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations
+
+
