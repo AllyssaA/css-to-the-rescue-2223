@@ -1,84 +1,37 @@
-/* input */
+/* switch toggle */
 input {
   z-index: 1;
-}
-
-form {
-  position: absolute;
-  z-index: 1;
-}
-
-form label {
   position: relative;
-  display: inline-block;
+  margin: 0 10px;
   width: 3.75em;
   height: 2.125em;
-}
-
-label input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-form label span {
-  position: absolute;
+  border-radius: 25px;
+  background: #999;
+  outline: 0;
+  appearance: none;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
 }
 
-form label span:before {
-  position: absolute;
+/* rondje in de switch */
+input:after {
   content: "";
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  display: block;
   height: 1.625em;
   width: 1.625em;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
+  border-radius: 50%;
+  background: #eee;
+  transition: all 0.5s linear;
 }
 
-input:checked + span {
+input:checked {
   background-color: rgb(36, 75, 107);
 }
 
-input:checked + span:before {
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-form label span {
-  border-radius: 34px;
-}
-
-form label span:before {
-  border-radius: 50%;
-}
-
-form label input:before {
-  content: "";
-  position: relative;
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50rem;
-  transition: all 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95);
-}
-
-form label input:after {
-  content: "";
-  background: rgba(150, 150, 150, 0.2);
-  padding: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 1.5rem;
-  position: fixed;
-  border-radius: 5px;
+input:checked:after {
+  transform: translateX(100%);
 }
 
 /* container */
@@ -91,11 +44,11 @@ body section {
 }
 
 /* lucht bij dag*/
-form:invalid ~ section > div:nth-of-type(1):before {
+form:not(:valid) ~ section > div:nth-of-type(1):before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 50%;
+  height: 65%;
   top: 0;
   left: 0;
   /* background-color: #d89766; */
@@ -105,16 +58,13 @@ form:invalid ~ section > div:nth-of-type(1):before {
     hsl(206, 63%, 76%) 4%,
     hsl(206, 63%, 76%) 9%,
     hsl(206, 63%, 76%) 15%,
-    hsl(206, 63%, 76%) 21%,
-    hsl(206, 63%, 76%) 28%,
-    hsl(206, 63%, 76%) 35%,
-    hsl(206, 63%, 76%) 42%,
-    hsl(206, 63%, 76%) 49%,
-    hsl(206, 63%, 76%) 56%,
-    hsl(206, 63%, 76%) 63%,
-    hsl(206, 63%, 76%) 70%,
-    hsl(206, 63%, 76%) 76%,
-    hsl(206, 63%, 76%) 82%,
+    hsl(206, 61%, 78%) 21%,
+    hsl(205, 46%, 78%) 28%,
+    hsl(206, 54%, 84%) 35%,
+    /* hsl(206, 63%, 76%) 42%, */ /* hsl(206, 63%, 76%) 49%, */
+      /* hsl(206, 63%, 76%) 56%, */ /* hsl(206, 63%, 76%) 63%, */
+      /* hsl(206, 63%, 76%) 70%, */ /* hsl(206, 63%, 76%) 76%, */
+      hsl(206, 66%, 85%) 82%,
     hsl(206, 63%, 76%) 87%,
     hsl(206, 63%, 76%) 91%,
     hsl(206, 63%, 76%) 95%,
@@ -124,16 +74,15 @@ form:invalid ~ section > div:nth-of-type(1):before {
 }
 
 /* lucht bij nacht */
-form:valid ~ section > div:nth-of-type(1) {
+form:has(:checked) ~ section > div:nth-of-type(1) {
   position: absolute;
-  width: inherit;
-  height: 50%;
+  width: 100%;
+  height: 65%;
   top: 0;
   left: 0;
   background-image: linear-gradient(
     0deg,
-    hsl(19, 55%, 40%) 1%,
-    hsl(207deg 58% 40%) 4%,
+    /* hsl(19, 55%, 40%) 1%, */ hsl(207deg 58% 40%) 4%,
     hsl(210deg 63% 37%) 9%,
     hsl(213deg 69% 35%) 15%,
     hsl(216deg 80% 32%) 21%,
@@ -154,13 +103,11 @@ form:valid ~ section > div:nth-of-type(1) {
   );
 }
 
-/* zon daglicht */
-form:invalid ~ section div:nth-of-type(1) div:nth-child(1) {
+/* zon */
+form:not(:checked) ~ section > div:nth-of-type(1) > div:nth-child(1) {
   position: relative;
   width: 13em;
   height: 14em;
-  /* top: 80%; */
-  /* left: 50%; */
   bottom: 50%;
   background: radial-gradient(
     circle,
@@ -170,18 +117,19 @@ form:invalid ~ section div:nth-of-type(1) div:nth-child(1) {
   );
 }
 
-/* zonsondergang */
-form:valid ~ section div:nth-of-type(1) div:nth-child(1) {
+/* maan */
+form:has(:checked) ~ section > div:nth-of-type(1) > div:nth-child(1) {
+  z-index: 1;
   position: relative;
   width: 13em;
   height: 14em;
-  top: 80%;
+  top: 0;
   left: 50%;
   bottom: 50%;
   background: radial-gradient(
     circle,
-    #fff2d6 20%,
-    #d89766 35%,
+    #c2bfba 20%,
+    #e1dbd6 35%,
     transparent 55%
   );
 }
@@ -203,11 +151,12 @@ form:valid ~ section div:nth-of-type(1) div:nth-child(1) {
   } */
 
 /* oceaan zonsondergang*/
-form:valid ~ section div:nth-of-type(2) {
+form:has(:checked) ~ section > div:nth-of-type(2) {
   position: absolute;
-  width: inherit;
-  height: 50%;
+  width: 100%;
+  height: 25%;
   bottom: 0;
+  left: 0;
   background: conic-gradient(
     from 90deg at 50% 150%,
     #589bce,
@@ -219,11 +168,12 @@ form:valid ~ section div:nth-of-type(2) {
 }
 
 /* oceaan bij dag*/
-form:invalid ~ section div:nth-of-type(2) {
+form:not(:valid) ~ section > div:nth-of-type(2) {
   position: absolute;
-  width: inherit;
-  height: 50%;
+  width: 100%;
+  height: 25%;
   bottom: 0;
+  left: 0;
   background: conic-gradient(
     from 90deg at 50% 150%,
     #589bce,
@@ -232,4 +182,100 @@ form:invalid ~ section div:nth-of-type(2) {
     #b1b8c2,
     #327bba
   );
+}
+
+/* grond */
+section section {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 25%;
+  left: 0;
+  /* z-index: 1; */
+  background: linear-gradient(
+    to top,
+    #9e906e 20%,
+    #9e906e 40%,
+    #2ecc71 50%,
+    #2ecc71 100%
+  );
+}
+
+svg {
+  position: relative;
+  bottom: 4em;
+  height: 80%;
+  width: 100%;
+  --leafs: green;
+  --treeTrunk: #684132;
+}
+
+svg g ellipse,
+polygon,
+path {
+  fill: var(--leafs);
+}
+
+svg g rect {
+  fill: var(--treeTrunk);
+}
+
+@keyframes firework {
+  0% {
+    transform: translate(-50%, 20vh);
+    /* width: 0.5vmin; */
+    opacity: 1;
+  }
+  50% {
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  100% {
+    width: 45vmin;
+    opacity: 0;
+  }
+}
+
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(2),
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(2):before,
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(2):after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgb(255, 30, 0) 0.2vmin, #0000 0) 50% 00%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.3vmin, #0000 0) 00% 50%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.5vmin, #0000 0) 50% 99%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.2vmin, #0000 0) 99% 50%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.3vmin, #0000 0) 80% 90%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.5vmin, #0000 0) 95% 90%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.5vmin, #0000 0) 10% 60%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.2vmin, #0000 0) 31% 80%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.3vmin, #0000 0) 80% 10%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.2vmin, #0000 0) 90% 23%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.3vmin, #0000 0) 45% 20%,
+    radial-gradient(circle, rgb(255, 30, 0) 0.5vmin, #0000 0) 13% 24%;
+  background-size: 0.5vmin 0.5vmin;
+  background-repeat: no-repeat;
+  animation: firework 5s infinite;
+}
+
+form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(2):before {
+  transform: translate(-50%, -50%) rotate(25deg) !important; 
+}
+form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(2):after {
+  transform: translate(-50%, -50%) rotate(-37deg) !important;
 }
