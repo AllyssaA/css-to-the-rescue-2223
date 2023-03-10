@@ -82,7 +82,7 @@ form:has(:checked) ~ section > div:nth-of-type(1) {
   left: 0;
   background-image: linear-gradient(
     0deg,
-    /* hsl(19, 55%, 40%) 1%, */ hsl(207deg 58% 40%) 4%,
+    hsl(207deg 58% 40%) 4%,
     hsl(210deg 63% 37%) 9%,
     hsl(213deg 69% 35%) 15%,
     hsl(216deg 80% 32%) 21%,
@@ -150,8 +150,8 @@ form:has(:checked) ~ section > div:nth-of-type(1) > div:nth-child(1) {
     transform: skew(20deg);
   } */
 
-/* oceaan zonsondergang*/
-form:has(:checked) ~ section > div:nth-of-type(2) {
+/* oceaan bij nacht*/
+form:has(:checked) ~ section:nth-of-type(1) > div:last-of-type {
   position: absolute;
   width: 100%;
   height: 25%;
@@ -168,7 +168,7 @@ form:has(:checked) ~ section > div:nth-of-type(2) {
 }
 
 /* oceaan bij dag*/
-form:not(:valid) ~ section > div:nth-of-type(2) {
+form:not(:valid) ~ section:nth-of-type(1) > div:last-of-type {
   position: absolute;
   width: 100%;
   height: 25%;
@@ -220,62 +220,148 @@ svg g rect {
   fill: var(--treeTrunk);
 }
 
-@keyframes firework {
-  0% {
-    transform: translate(-50%, 20vh);
-    /* width: 0.5vmin; */
-    opacity: 1;
-  }
-  50% {
-    width: 0.5vmin;
-    opacity: 1;
-  }
-  100% {
-    width: 45vmin;
-    opacity: 0;
-  }
+li{
+  list-style: none;
 }
 
-form:has(:checked)
-  ~ section:nth-of-type(1)
-  div:nth-of-type(1)
-  div:nth-of-type(2),
-form:has(:checked)
-  ~ section:nth-of-type(1)
-  div:nth-of-type(1)
-  div:nth-of-type(2):before,
-form:has(:checked)
-  ~ section:nth-of-type(1)
-  div:nth-of-type(1)
-  div:nth-of-type(2):after {
-  content: "";
-  z-index: 1;
+/* vuurwerk */
+form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) ul {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0.5vmin;
-  aspect-ratio: 1;
-  background: radial-gradient(circle, rgb(255, 30, 0) 0.2vmin, #0000 0) 50% 00%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.3vmin, #0000 0) 00% 50%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.5vmin, #0000 0) 50% 99%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.2vmin, #0000 0) 99% 50%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.3vmin, #0000 0) 80% 90%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.5vmin, #0000 0) 95% 90%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.5vmin, #0000 0) 10% 60%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.2vmin, #0000 0) 31% 80%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.3vmin, #0000 0) 80% 10%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.2vmin, #0000 0) 90% 23%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.3vmin, #0000 0) 45% 20%,
-    radial-gradient(circle, rgb(255, 30, 0) 0.5vmin, #0000 0) 13% 24%;
-  background-size: 0.5vmin 0.5vmin;
-  background-repeat: no-repeat;
-  animation: firework 5s infinite;
 }
 
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(2):before {
-  transform: translate(-50%, -50%) rotate(25deg) !important; 
+form:has(:checked) ~ section:nth-of-type(1) ul li {
+  position: absolute;
+  left: 0vw;
+  bottom: 20vw;
+  width: 0.2vw;
+  height: 5vw;
+  transform-origin: 50% 80%;
+  list-style: none;
+  overflow: hidden;
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(2):after {
-  transform: translate(-50%, -50%) rotate(-37deg) !important;
+
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(1) {
+  transform: rotate(0deg) translateY(-1vw);
 }
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(2) {
+  transform: rotate(30deg) translateY(-1vw);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(3) {
+  transform: rotate(60deg) translateY(-1vw);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(4) {
+  transform: rotate(90deg) translateY(-1vw);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(5) {
+  transform: rotate(120deg) translateY(-1vw);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(6) {
+  transform: rotate(150deg) translateY(-1vw);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(7) {
+  transform: rotate(180deg) translateY(-1vw);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(8) {
+  transform: rotate(210deg) translateY(-1vw);;
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(9) {
+  transform: rotate(240deg) translateY(-1vw);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(10) {
+  transform: rotate(270deg) translateY(-1vw);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(1) {
+  transform: rotate(300deg) translateY(-1vw);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(11) {
+  transform: rotate(330deg) translateY(-1vw);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul li:nth-child(12) {
+  transform: rotate(360deg) translateY(-1vw);
+}
+
+form:has(:checked) ~ section:nth-of-type(1) ul li:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2.8vw;
+  background-color: gold;
+}
+
+@keyframes vuurwerk {
+  0% {
+    top: 100%;
+    opacity: 100%;
+  }
+  40%,
+  100% {
+    top: -60%;
+    opacity: 50%;
+  }
+}
+
+form:has(:checked) ~ section:nth-of-type(1) ul:nth-of-type(1) {
+  left: 40%;
+  top: 30%;
+  /* transform: scale(1); */
+}
+
+form:has(:checked) ~ section:nth-of-type(1) ul:nth-of-type(1) li:before {
+  animation: vuurwerk 1.75s ease-in-out infinite;
+  animation-delay: 1.75s;
+}
+
+form:has(:checked) ~ section:nth-of-type(1) ul:nth-of-type(1) li:nth-of-type(2n):before {
+  background-color: red;
+}
+
+form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) > div:nth-of-type(2){
+  position: absolute;
+  background-color: rgb(255, 0, 0);
+	width: 0.25vw;
+	border-radius: 25%;
+	height: 0.5vw;
+	bottom: -8vw;
+	left: -2.5vw;
+	opacity: 0;
+	animation: omhoog 1.75s ease-in-out infinite;
+	animation-delay: 0.1s;
+}
+
+@keyframes omhoog {
+	0%,
+	45% {
+		transform: translate(20vw, -10vw);
+		opacity: 100%;
+	}
+	95% {
+		transform: translate(20vw, -30vw);
+		opacity: 100%;
+	}
+	96%,
+	100% {
+		transform: translate(20vw, -30vw);
+		opacity: 0%;
+	}
+}
+
+/* form:has(:checked) ~ section:nth-of-type(1)  {
+  left: 40%;
+  top: 45%;
+  transform: scale(.7);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul:nth-of-type(2) li:before {
+  animation: vuurwerk 3s 2s ease-in-out infinite;
+}
+
+form:has(:checked) ~ section:nth-of-type(1) ul:nth-of-type(3) {
+  left: 50%;
+  top: 65%;
+  transform: scale(.4);
+}
+form:has(:checked) ~ section:nth-of-type(1) ul:nth-of-type(3) li:before {
+  animation: vuurwerk 2s 4s ease-in-out infinite;
+}
+ */

@@ -94,6 +94,16 @@ https://codepen.io/AllyssaA/pen/KKxayZO?editors=1100
 Deze week heb ik bomen aan mijn opdracht toegevoegd. Dit heb ik gedaan door 3 bomen in Illustrator te tekenen en te exporteren als SVG. Vervolgens heb ik styling hieraan toegevoegd met CSS.
 
 
+# Wat ging er soepel , wat was lastig en waar ben je trots op
+Ik ben trots op de switch toggle die ik heb gemaakt. Ik denk dat ik daar het meeste tijd in heb besteed om het goed werkend te krijgen door het te refactoren en gebruik te maken van before en after. 
+Wat ik lastig vond was het maken van vuurwerk. Doordat ik veel divs heb gebruikt raakte ik op een gegeven moment de weg kwijt welke CSS code nou bij de HTML code hoorde, waardoor het een hele puzzel was om dat uit te vinden.  
+
+# Heb je nieuwe inzichten hoe je de kracht CSS kunt benutten (of juist niet).
+De manier waaarom je animaties en keyframes kan gebruiken.
+
+# Waar wil je meer mee gaan doen.
+
+
 
 # Bronnen
 https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/conic-gradient
