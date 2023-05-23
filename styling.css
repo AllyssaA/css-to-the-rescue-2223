@@ -2,10 +2,10 @@
 input {
   z-index: 1;
   position: relative;
-  margin: 0 10px;
-  width: 3.75em;
-  height: 2.125em;
-  border-radius: 25px;
+  margin: 0 10px; /* bah bah */
+  width: 4.5em;
+  height: 2.5em;
+  border-radius: 25px; /* bah bah */
   background: #999;
   outline: 0;
   appearance: none;
@@ -16,14 +16,16 @@ input {
 input:after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 2px;
+  /*top: 4px; /* bah bah */
+  /*left: 2px; /* bah bah */
+  top:.25em;
+  left:.25em;
   display: block;
-  height: 1.625em;
-  width: 1.625em;
+  height: 2em;
+  width: 2em;
   border-radius: 50%;
   background: #eee;
-  transition: all 0.5s linear;
+  transition: .25s ease-out;
 }
 
 input:checked {
