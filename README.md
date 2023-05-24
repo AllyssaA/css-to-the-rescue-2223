@@ -74,7 +74,7 @@ background: conic-gradient(
 ```
 
 # Week 2
-In week 2 heb ik voor de themasessie animaties gekozen omdat ik nog niet veel wist hierover en hoe ik dat kon toepassen op vuurwerk. Tijdens deze sessie hebben we het o.a. gehad over:
+In week 2 heb ik tijdens de themasessie over animaties gekozen, omdat ik nog niet veel kennis had over dit onderwerp en wilde leren hoe ik animaties kon toepassen op mijn vuurwerkshow. Tijdens deze sessie hebben we verschillende aspecten van animaties besproken, zoals de naam van @keyframes, de duur, het aantal herhalingen, de richting, de afspeelstatus en de timingfunctie van de animatie.
 - animation-name naam van @keyframes
 - animation-duration
 - animation-iteration-count
@@ -82,30 +82,50 @@ In week 2 heb ik voor de themasessie animaties gekozen omdat ik nog niet veel wi
 - animation-play-state running paused
 - animation-timing-function om te chainen en overzicht te houden meerdere divs met keyframes gebruiken, buitenkant gaat omhoog en de binnenste gaat draaien.
 
+Ik heb een codepen gemaakt waarin ik animaties heb toegepast op mijn vuurwerkshow. Ik gebruikte meerdere div-elementen met bijbehorende @keyframes-regels om de beweging van het vuurwerk te simuleren. Dit was een uitdagende taak waarbij ik moest zorgen dat de timing en de coördinaten van de animatie goed waren ingesteld.
+
+Ik heb ook gewerkt aan het verbeteren van mijn switch-toggle. In plaats van het gebruik van een label en een span, heb ik gebruikgemaakt van de pseudoelementen :before en :after om de switch te maken. Hierdoor kon ik de code vereenvoudigen en de interactieve functionaliteit behouden.
+
 https://codepen.io/AllyssaA/pen/bGxGXPe
 
-In mijn code had ik een switch gemaakt waarbij ik gebruik maakte van een form, daarin had ik een input checkbox met label en een span. Deze switch zorgt ervoor dat ik van dag naar nacht kan switchen. Ik kreeg als opmerking dat ik de de switch ook zonder label en span kon maken door middel van gebruik van `:before` en `:after`. Hiermee ging ik de rest van de week mee aan de slag.  
 
 # Week 3
-Tussen week 2 en 3 liep ik een beetje vast met het refactoren van mijn switch. Ik besloot dus om helemaal opnieuw te beginnen met mijn switch in een codepen en het duurde een tijdje maar uiteindelijk is het me toch gelukt om een switch te maken zonder label of een span.
+Tussen week 2 en week 3 liep ik vast bij het refactoren van mijn switch-toggle. Ik besloot om helemaal opnieuw te beginnen met het maken van de switch in een codepen. Het kostte me wat tijd, maar uiteindelijk slaagde ik erin om een switch te maken zonder het gebruik van een label of een span.
 
 https://codepen.io/AllyssaA/pen/KKxayZO?editors=1100
 
-Deze week heb ik bomen aan mijn opdracht toegevoegd. Dit heb ik gedaan door 3 bomen in Illustrator te tekenen en te exporteren als SVG. Vervolgens heb ik styling hieraan toegevoegd met CSS.
+In deze week voegde ik ook bomen toe aan mijn vuurwerkshow. Ik tekende drie bomen in Illustrator en exporteerde ze als SVG-bestanden. Vervolgens voegde ik styling toe met behulp van CSS om de bomen weer te geven.
 
 
 # Wat ging er soepel , wat was lastig en waar ben je trots op
-Ik ben trots op de switch toggle die ik heb gemaakt. Ik denk dat ik daar het meeste tijd in heb besteed om het goed werkend te krijgen door het te refactoren en gebruik te maken van before en after. 
-Wat ik lastig vond was het maken van vuurwerk. Doordat ik veel divs heb gebruikt raakte ik op een gegeven moment de weg kwijt welke CSS code nou bij de HTML code hoorde, waardoor het een hele puzzel was om dat uit te vinden.  
+Ik ben trots op de switch-toggle die ik heb gemaakt. Ik heb hier veel tijd aan besteed om het goed werkend te krijgen door het te refactoren en gebruik te maken van :before en :after pseudo-elementen.
+
+Wat ik lastig vond, was het maken van het vuurwerk. Doordat ik veel div-elementen heb gebruikt, raakte ik op een gegeven moment het overzicht kwijt over welke CSS-code bij welk HTML-element hoorde. Dit maakte het een puzzel om alles op de juiste manier te organiseren.
 
 # Heb je nieuwe inzichten hoe je de kracht CSS kunt benutten (of juist niet).
-De manier waaarom je animaties en keyframes kan gebruiken.
+Ik heb nieuwe inzichten gekregen in hoe ik de kracht van CSS kan benutten, met name op het gebied van animaties en keyframes. Het gebruik van @keyframes stelde me in staat om complexe bewegingen en overgangen te creëren, en ik heb geleerd hoe ik deze effectief kan combineren om de gewenste visuele effecten te bereiken.
 
-# Waar wil je meer mee gaan doen.
+Ik heb ook geleerd hoe ik met behulp van lineaire, radiale en conische gradiënten interessante achtergrondeffecten kan creëren. Dit stelde me in staat om de lucht, de zon, de maan en de oceaan op een realistische en boeiende manier weer te geven.
+
+Over het algemeen ben ik blij met de nieuwe inzichten die ik heb opgedaan en de mogelijkheden die CSS biedt om creatieve en interactieve webervaringen te creëren.
 
 
 # Herkansing
-Voor de herkansing heb ik meer vuurwerk toegevoegd en heb ik een beetje geexperimenteerd met animaties. Dit vond ik best wel lastig om de timing goed toe te passen. Ik heb ook 
+Voor de herkansing heb ik mijn werk verbeterd door gebruik te maken van verschillende geavanceerde technieken. Ik heb keyframes toegepast om animaties te creëren die het vuurwerk laten exploderen op het scherm. Het was een uitdaging om de timing van de animaties precies goed te krijgen, maar ik ben erin geslaagd om een visueel effect te creëren.
+
+Daarnaast heb ik de pseudo-elementen :before en :after gebruikt om extra elementen aan mijn ontwerp toe te voegen. Zo heb ik een reflectie van de maan gemaakt, die een realistisch effect geeft aan de scène. Ook heb ik met behulp van :before en :after het wolkje geanimeerd, waardoor het lijkt alsof het voorbij drijft.
+
+Om mijn code georganiseerd te houden en herbruikbaarheid te bevorderen, heb ik veelvuldig gebruik gemaakt van ul (unordered list) en li (list item) elementen, met een div-element eromheen. Dit stelde me in staat om de verschillende onderdelen van mijn ontwerp logisch te groeperen en gemakkelijk stijlen en animaties toe te passen op specifieke elementen.
+
+De toevoeging van meer vuurwerk en het experimenteren met animaties hebben mijn werk visueel aantrekkelijker gemaakt. Dankzij het gebruik van keyframes, pseudo-elementen en goed gestructureerde code heb ik een vuurwerkshow kunnen realiseren.
+
+# Wishlist
+Er zijn nog enkele punten die ik niet heb kunnen aanpakken maar waar ik wel graag nog aan zou willen werken:
+
+- Het animeren van een rondje op de switch (iets spectaculairder maken)
+- Het creëren van een berg met een beetje sneeuw op de top
+- Het intensiveren van de vuurwerkshow door verschillende animaties toe te voegen
+-  Het creëren van een prachtige sterrenhemel
 
 
 
