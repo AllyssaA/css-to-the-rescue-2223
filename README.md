@@ -125,7 +125,7 @@ Er zijn nog enkele punten die ik niet heb kunnen aanpakken maar waar ik wel graa
 - Het animeren van een rondje op de switch (iets spectaculairder maken)
 - Het creëren van een berg met een beetje sneeuw op de top
 - Het intensiveren van de vuurwerkshow door verschillende animaties toe te voegen
--  Het creëren van een prachtige sterrenhemel
+- Het creëren van een prachtige sterrenhemel
 
 
 
