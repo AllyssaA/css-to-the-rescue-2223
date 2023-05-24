@@ -104,6 +104,10 @@ De manier waaarom je animaties en keyframes kan gebruiken.
 # Waar wil je meer mee gaan doen.
 
 
+# Herkansing
+Voor de herkansing heb ik meer vuurwerk toegevoegd en heb ik een beetje geexperimenteerd met animaties. Dit vond ik best wel lastig om de timing goed toe te passen. Ik heb ook 
+
+
 
 # Bronnen
 https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/conic-gradient

@@ -142,7 +142,7 @@ form:has(:checked)
     #e1dbd6 35%,
     transparent 55%
   );
-  filter: blur(0.2em);
+  filter: blur(0.1em);
 }
 
 /* oceaan bij nacht*/
@@ -200,9 +200,10 @@ section section {
 
 svg {
   position: relative;
-  bottom: 4em;
-  height: 80%;
+  bottom: 5em;
+  height: 280%;
   width: 100%;
+  top: -150%;
   --leafs: green;
   --treeTrunk: #684132;
 }
@@ -226,7 +227,12 @@ form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) ul {
   position: absolute;
 }
 
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(2) ul li {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(2)
+  ul
+  li {
   position: absolute;
   left: 0vw;
   bottom: 20vw;
@@ -346,6 +352,7 @@ form:has(:checked)
   background-color: red;
 }
 
+/* vuurwerl 1 omhoog schieten */
 form:has(:checked)
   ~ section:nth-of-type(1)
   div:nth-of-type(1)
@@ -365,16 +372,16 @@ form:has(:checked)
 @keyframes omhoog {
   0%,
   45% {
-    transform: translate(20vw, -10vw);
+    transform: translate(20vw, -20vw);
     opacity: 100%;
   }
   95% {
-    transform: translate(20vw, -30vw);
+    transform: translate(20vw, -42vw);
     opacity: 100%;
   }
   96%,
   100% {
-    transform: translate(20vw, -30vw);
+    transform: translate(20vw, -42vw);
     opacity: 0%;
   }
 }
@@ -387,12 +394,29 @@ form:has(:checked)
   position: absolute;
   width: 0.25vw;
   height: 0.5vw;
-  bottom: 10vw;
+  bottom: 1vw;
   left: 30vw;
   border-radius: 25%;
   background-color: gold;
-  animation: omhoog 1.75s ease-in-out infinite;
+  animation: omhoog2 1.75s ease-in-out infinite;
   animation-delay: 0.7s;
+}
+
+@keyframes omhoog2 {
+  0%,
+  45% {
+    transform: translate(20vw, -20vw);
+    opacity: 100%;
+  }
+  95% {
+    transform: translate(20vw, -42vw);
+    opacity: 100%;
+  }
+  96%,
+  100% {
+    transform: translate(20vw, -42vw);
+    opacity: 0%;
+  }
 }
 
 form:has(:checked)
@@ -478,64 +502,137 @@ form:has(:checked)
   div:nth-of-type(4)
   ul
   li:before {
-    animation: vuurwerk 1.75s ease-in-out infinite;
-    animation-delay: 1.75s;
+  animation: vuurwerk 1.75s ease-in-out infinite;
+  animation-delay: 1.75s;
 }
 
 /* -------------------------------------- */
 /* vuurwerk 1 weerspiegeling */
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul {
   position: absolute;
 }
 
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li {
   position: absolute;
   left: 0vw;
   bottom: -10vw;
-  width: 0.2vw;
+  width: 0.1vw;
   height: 2vw;
   transform-origin: 50% 80%;
-  list-style: none;
   overflow: hidden;
 }
 
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(1) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(1) {
   transform: rotate(0deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(2) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(2) {
   transform: rotate(30deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(3) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(3) {
   transform: rotate(60deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(4) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(4) {
   transform: rotate(90deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(5) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(5) {
   transform: rotate(120deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(6) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(6) {
   transform: rotate(150deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(7) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(7) {
   transform: rotate(180deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(8) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(8) {
   transform: rotate(210deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(9) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(9) {
   transform: rotate(240deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(10) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(10) {
   transform: rotate(270deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(1) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(1) {
   transform: rotate(300deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(11) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(11) {
   transform: rotate(330deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(5) ul li:nth-child(12) {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(5)
+  ul
+  li:nth-child(12) {
   transform: rotate(360deg) translateY(-1vw);
 }
 
@@ -544,7 +641,7 @@ form:has(:checked)
   div:nth-of-type(1)
   div:nth-of-type(5)
   ul
-  li:before{
+  li:before {
   content: "";
   position: absolute;
   top: 100%;
@@ -562,7 +659,7 @@ form:has(:checked)
   40%,
   100% {
     top: -60%;
-    opacity: 50%;
+    opacity: 0%;
   }
 }
 
@@ -583,7 +680,7 @@ form:has(:checked)
   ul:nth-of-type(1)
   li:before {
   animation: weerspiegeling 1.75s ease-in-out infinite;
-  animation-delay: 1.75s;
+  animation-delay: 1.85s;
 }
 
 /* elk even li is rood */
@@ -602,16 +699,16 @@ form:has(:checked)
   > div:nth-of-type(5) {
   position: absolute;
   background-color: gold;
-  width: 0.2vw;
-  height: 0.1vw;
+  /* width: 0.2vw;
+  height: 0.1vw; */
   border-radius: 25%;
-  bottom: 25vw;
-  left: -3vw;
-  opacity: 0;
-  animation: omlaag 1.75s ease-in-out infinite;
+  bottom: 20vw;
+  left: 16vw;
+  opacity: 1;
+  /* animation: omlaag 1.75s ease-in-out infinite; */
   animation-delay: 0.1s;
   z-index: 1;
-  filter: blur(0.2em);
+  filter: blur(0.1em);
 }
 
 @keyframes omlaag {
@@ -631,24 +728,14 @@ form:has(:checked)
   }
 }
 
-
 /* --------------------------------------------- */
 /* weerspiegeling vuurwerk 2 */
 form:has(:checked)
   ~ section:nth-of-type(1)
   div:nth-of-type(1)
-  div:nth-of-type(6) {
+  div:nth-of-type(6)
+  ul {
   position: absolute;
-  width: 0.25vw;
-  height: 0.5vw;
-  bottom: 10vw;
-  left: 30vw;
-  border-radius: 25%;
-  /* background-color: gold; */
-  animation: omlaag 1.75s ease infinite;
-  animation-delay: 1.75s;
-  z-index: 1;
-  filter: blur(0.2em);
 }
 
 form:has(:checked)
@@ -659,11 +746,116 @@ form:has(:checked)
   li {
   position: absolute;
   left: 0vw;
-  bottom: 0;
-  width: 0.2vw;
+  bottom: -10vw;
+  width: 0.1vw;
   height: 2vw;
   transform-origin: 50% 80%;
-  /* overflow: hidden; */
+  overflow: hidden;
+}
+
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(1) {
+  transform: rotate(0deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(2) {
+  transform: rotate(30deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(3) {
+  transform: rotate(60deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(4) {
+  transform: rotate(90deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(5) {
+  transform: rotate(120deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(6) {
+  transform: rotate(150deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(7) {
+  transform: rotate(180deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(8) {
+  transform: rotate(210deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(9) {
+  transform: rotate(240deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(10) {
+  transform: rotate(270deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(1) {
+  transform: rotate(300deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(11) {
+  transform: rotate(330deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul
+  li:nth-child(12) {
+  transform: rotate(360deg) translateY(-1vw);
 }
 
 form:has(:checked)
@@ -672,18 +864,26 @@ form:has(:checked)
   div:nth-of-type(6)
   ul
   li:before {
-  animation: weerspiegeling 1.75s ease-out infinite;
-  animation-delay: 0.7s;
   content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 2.8vw;
-    background-color: gold;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2.8vw;
+  background-color: gold;
 }
 
-/* elk even li is #ffc93c */
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(6)
+  ul:nth-of-type(1)
+  li:before {
+  animation: weerspiegeling 1.75s ease-in-out infinite;
+  animation-delay: 0.7s;
+}
+
+/* elk even li is rood */
 form:has(:checked)
   ~ section:nth-of-type(1)
   div:nth-of-type(1)
@@ -693,24 +893,32 @@ form:has(:checked)
   background-color: #155263;
 }
 
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  > div:nth-of-type(6) {
+  position: absolute;
+  background-color: gold;
+  /* width: 0.2vw;
+  height: 0.1vw; */
+  border-radius: 25%;
+  bottom: 15vw;
+  left: 50vw;
+  opacity: 1;
+  /* animation: omlaag 1.75s ease-in-out infinite; */
+  animation-delay: 0.1s;
+  z-index: 1;
+  filter: blur(0.0525em);
+}
 
 /* ------------------------------ */
 /* weerspiegeling vuurwerk 3 */
 form:has(:checked)
   ~ section:nth-of-type(1)
   div:nth-of-type(1)
-  div:nth-of-type(7) {
+  div:nth-of-type(7)
+  ul {
   position: absolute;
-  /* width: 0.25vw;
-  height: 0.5vw; */
-  bottom: 11vw;
-  left: 63vw;
-  /* border-radius: 25%; */
-  background-color: pink;
-  animation: omlaag 1.75s ease-in-out infinite;
-  animation-delay: 0.1s;
-  z-index: 1;
-  filter: blur(0.2em);
 }
 
 form:has(:checked)
@@ -721,23 +929,124 @@ form:has(:checked)
   li {
   position: absolute;
   left: 0vw;
-  bottom: 10vw;
-  width: 0.2vw;
+  bottom: -10vw;
+  width: 0.1vw;
   height: 2vw;
   transform-origin: 50% 80%;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
-/* elk even li is pink */
 form:has(:checked)
   ~ section:nth-of-type(1)
   div:nth-of-type(1)
   div:nth-of-type(7)
-  ul:nth-of-type(1)
-  li:nth-of-type(2n):before {
-  background-color: pink;
+  ul
+  li:nth-child(1) {
+  transform: rotate(0deg) translateY(-1vw);
 }
-form:has(:checked) ~ section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(7) ul li:before {
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(2) {
+  transform: rotate(30deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(3) {
+  transform: rotate(60deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(4) {
+  transform: rotate(90deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(5) {
+  transform: rotate(120deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(6) {
+  transform: rotate(150deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(7) {
+  transform: rotate(180deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(8) {
+  transform: rotate(210deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(9) {
+  transform: rotate(240deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(10) {
+  transform: rotate(270deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(1) {
+  transform: rotate(300deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(11) {
+  transform: rotate(330deg) translateY(-1vw);
+}
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:nth-child(12) {
+  transform: rotate(360deg) translateY(-1vw);
+}
+
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul
+  li:before {
   content: "";
   position: absolute;
   top: 100%;
@@ -751,9 +1060,106 @@ form:has(:checked)
   ~ section:nth-of-type(1)
   div:nth-of-type(1)
   div:nth-of-type(7)
-  ul
+  ul:nth-of-type(1)
   li:before {
-    animation: weerspiegeling 1.75s ease-in-out infinite;
-    animation-delay: 1.75s;
+  animation: weerspiegeling 1.75s ease-in-out infinite;
+  animation-delay: 0.1s;
 }
+
+/* elk even li is rood */
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  div:nth-of-type(7)
+  ul:nth-of-type(1)
+  li:nth-of-type(2n):before {
+  background-color: pink;
+}
+
+form:has(:checked)
+  ~ section:nth-of-type(1)
+  div:nth-of-type(1)
+  > div:nth-of-type(7) {
+  position: absolute;
+  background-color: gold;
+  /* width: 0.2vw;
+  height: 0.1vw; */
+  border-radius: 25%;
+  bottom: 15vw;
+  left: 83vw;
+  opacity: 1;
+  /* animation: omlaag 1.75s ease-in-out infinite; */
+  animation-delay: 0.1s;
+  z-index: 1;
+  filter: blur(0.1em);
+}
+
+/* wolkje */
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(8),
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(8):before,
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(8):after {
+  position: absolute;
+  width: 4.375em;
+  height: 1.875em;
+  border-radius: 6.25em / 3.125em;
+  z-index: 1;
+  background-color: #fff;
+}
+
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(8) {
+  top: 10%;
+  animation: wolkje 50s infinite linear;
+}
+
+@keyframes wolkje {
+  0% {
+    left: 6.25em;
+    right: 62.5em;
+  }
+  100% {
+    left: 62.5em;
+    right: 6.25em;
+  }
+}
+
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(8):before {
+  content: "";
+  left: 3.125em;
+}
+
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(8):after {
+  content: "";
+  left: 1.5625em;
+  top: -0.625em;
+}
+
+/* wolkje reflectie */
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(9),
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(9):before,
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(9):after {
+  position: absolute;
+  width: 4.375em;
+  height: 1.875em;
+  border-radius: 6.25em / 3.125em;
+  z-index: 1;
+  background-color: #fff;
+  filter: blur(0.5em);
+}
+
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(9) {
+  top: 88%;
+  animation: wolkje 50s infinite linear;
+}
+
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(9):before {
+  content: "";
+  left: 3.125em;
+}
+
+section:nth-of-type(1) div:nth-of-type(1) div:nth-of-type(9):after {
+  content: "";
+  left: 1.5625em;
+  top: -0.625em;
+}
+
 
